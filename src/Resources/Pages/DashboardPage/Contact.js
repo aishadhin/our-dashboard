@@ -38,37 +38,8 @@ const Contacts = () => {
       </div>
       {/* contact sections  */}
       <div className="my-20 lg:grid lg:grid-cols-3 mx-auto">
-        {/* contact items  */}
-        <div className="lg:col-span-1">
-          <div className="flex bg-black p-5 rounded-xl my-5">
-            {/* numbers  */}
-            <div className="ml-5" data-aos="zoom-out-left">
-              <h1 className="text-xl text-white">Phone :</h1>
-              <h1 className="text-xxl text-white">+8801629249295</h1>
-            </div>
-          </div>
-          <div className="flex bg-black p-5 rounded-xl my-5">
-            {/* numbers  */}
-            <div className="ml-5" data-aos="zoom-out-left">
-              <h1 className="text-xl text-white">Email :</h1>
-              <h1 className="text-xxl text-white">
-                shahriarrahmanheezol@gmail
-              </h1>
-            </div>
-          </div>
-          <div className="flex bg-black p-5 rounded-xl my-5">
-            {/* numbers  */}
-            <div className="ml-5" data-aos="zoom-out-left">
-              <h1 className="text-xl text-white">Address :</h1>
-              <h1 className="text-xxl text-white">
-                Tejgaon I/A, Dhaka 1208, Bangladesh
-              </h1>
-            </div>
-          </div>
-        </div>
         {/* contact via email  */}
         <div className="lg:mx-10 my-5 py-10 px-10 bg-black rounded-lg border-2 lg:col-span-2">
-          <form ref={form} onSubmit={sendEmail}>
             <h1
               className="text-2xl text-white"
               data-aos="zoom-in"
@@ -82,7 +53,8 @@ const Contacts = () => {
                 design work or partnerships & Development
               </span>
             </h1>
-            <div className=" my-5">
+          <form ref={form} onSubmit={sendEmail} className="">
+            <div className="my-5 form-control">
               <input
                 type="text"
                 name="user_name"
@@ -90,6 +62,7 @@ const Contacts = () => {
                 placeholder="Your name*"
                 data-aos="zoom-out"
               />
+              
               <input
                 type="text"
                 name="user_email"
@@ -98,26 +71,22 @@ const Contacts = () => {
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
               />
-              <div className="dropdown dropdown-top dropdown-end">
-                <label tabIndex={0} className="text-white m-1">
-                  Click
-                </label>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
-                >
-                  <li>
-                    Item 1
-                  </li>
-                  <li>
-                    Item 2
-                  </li>
-                </ul>
-              </div>
+              
+              <select className="select w-full max-w-xs">
+                <option disabled selected>
+                  Pick your favorite Simpson
+                </option>
+                <option>Homer</option>
+                <option>Marge</option>
+                <option>Bart</option>
+                <option>Lisa</option>
+                <option>Maggie</option>
+              </select>
+              
               <input
                 type="text"
                 name="user_subject"
-                className="bg-transparent focus:outline-0 border-b-2 border-b-gray-100 w-full max-w-xs pb-2 mr-2"
+                className="bg-transparent focus:outline-0 border-b-2 border-b-gray-100 w-full max-w-xs pb-2 mr-2 my-10"
                 placeholder="Subject*"
                 data-aos="fade-up"
                 data-aos-anchor-placement="top-bottom"
